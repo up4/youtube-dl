@@ -14,6 +14,7 @@ from ..utils import (
     ExtractorError,
     determine_protocol,
     unsmuggle_url,
+    unescapeHTML
 )
 
 
@@ -174,3 +175,38 @@ class RadioCanadaAudioVideoIE(InfoExtractor):
 
     def _real_extract(self, url):
         return self.url_result('radiocanada:medianet:%s' % self._match_id(url))
+
+
+class RadioCanadaArticleIE(InfoExtractor):
+    _VALID_URL = r'https?://ici\.radio-canada\.ca/(?P<id>[^?#&]+)'
+    _TEST = {
+        'url': 'http://ici.radio-canada.ca/nouvelle/1000657/victimes-richard-henry-bain-abandonnees-ivac',
+        'info_dict': {
+            'id': '7633340',
+            'ext': 'mp4',
+            'title': 'La sentence de Bain connue vendredi',
+            'upload_date': '20161118',
+        },
+        'params': {
+            'skip_download': True,
+        },
+    }
+
+    @classmethod
+    def suitable(cls, url):
+        return False if RadioCanadaAudioVideoIE.suitable(url) else super(RadioCanadaArticleIE, cls).suitable(url)
+
+    def _real_extract(self, url):
+        display_id = self._match_id(url)
+        display_id.replace('/', '-')
+
+        webpage = unescapeHTML(self._download_webpage(url, display_id))
+
+        entries = [
+            self.url_result(
+                'radiocanada:medianet:%s' % mobj.group('id'),
+                ie=RadioCanadaIE.ie_key(), video_id=mobj.group('id'))
+            for mobj in re.finditer(
+                r'"idMedia"\s*:\s*"(?P<id>\d+)"', webpage)]
+
+        return self.playlist_result(entries, display_id)
