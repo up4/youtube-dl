@@ -465,10 +465,15 @@ from .kuwo import (
     KuwoMvIE,
 )
 from .la7 import LA7IE
+<<<<<<< HEAD
 from .laola1tv import (
     Laola1TvEmbedIE,
     Laola1TvIE,
 )
+=======
+from .laola1tv import Laola1TvIE
+from .lapresse import LaPresseIE
+>>>>>>> origin/lapresse
 from .lci import LCIIE
 from .lcp import (
     LcpPlayIE,
