@@ -196,7 +196,7 @@ def _real_main(argv=None):
     if opts.playlistend not in (-1, None) and opts.playlistend < opts.playliststart:
         raise ValueError('Playlist end must be greater than playlist start')
     if opts.extractaudio:
-        if opts.audioformat not in ['best', 'aac', 'mp3', 'm4a', 'opus', 'vorbis', 'wav']:
+        if opts.audioformat not in ['best', 'aac', 'flac', 'mp3', 'm4a', 'opus', 'vorbis', 'wav']:
             parser.error('invalid audio format specified')
     if opts.audioquality:
         opts.audioquality = opts.audioquality.strip('k').strip('K')
@@ -242,14 +242,11 @@ def _real_main(argv=None):
 
     # PostProcessors
     postprocessors = []
-    # Add the metadata pp first, the other pps will copy it
     if opts.metafromtitle:
         postprocessors.append({
             'key': 'MetadataFromTitle',
             'titleformat': opts.metafromtitle
         })
-    if opts.addmetadata:
-        postprocessors.append({'key': 'FFmpegMetadata'})
     if opts.extractaudio:
         postprocessors.append({
             'key': 'FFmpegExtractAudio',
@@ -262,6 +259,16 @@ def _real_main(argv=None):
             'key': 'FFmpegVideoConvertor',
             'preferedformat': opts.recodevideo,
         })
+    # FFmpegMetadataPP should be run after FFmpegVideoConvertorPP and
+    # FFmpegExtractAudioPP as containers before conversion may not support
+    # metadata (3gp, webm, etc.)
+    # And this post-processor should be placed before other metadata
+    # manipulating post-processors (FFmpegEmbedSubtitle) to prevent loss of
+    # extra metadata. By default ffmpeg preserves metadata applicable for both
+    # source and target containers. From this point the container won't change,
+    # so metadata can be added here.
+    if opts.addmetadata:
+        postprocessors.append({'key': 'FFmpegMetadata'})
     if opts.convertsubtitles:
         postprocessors.append({
             'key': 'FFmpegSubtitlesConvertor',
@@ -414,6 +421,11 @@ def _real_main(argv=None):
         'cn_verification_proxy': opts.cn_verification_proxy,
         'geo_verification_proxy': opts.geo_verification_proxy,
         'config_location': opts.config_location,
+        'geo_bypass': opts.geo_bypass,
+        'geo_bypass_country': opts.geo_bypass_country,
+        # just for deprecation check
+        'autonumber': opts.autonumber if opts.autonumber is True else None,
+        'usetitle': opts.usetitle if opts.usetitle is True else None,
     }
 
     with YoutubeDL(ydl_opts) as ydl:
