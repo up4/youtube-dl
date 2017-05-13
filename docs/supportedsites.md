@@ -28,6 +28,7 @@
  - **acast**
  - **acast:channel**
  - **AddAnime**
+ - **ADN**: Anime Digital Network
  - **AdobeTV**
  - **AdobeTVChannel**
  - **AdobeTVShow**
@@ -44,6 +45,7 @@
  - **anderetijden**: npo.nl and ntr.nl
  - **AnimeOnDemand**
  - **anitube.se**
+ - **Anvato**
  - **AnySex**
  - **Aparat**
  - **AppleConnect**
@@ -67,6 +69,7 @@
  - **arte.tv:playlist**
  - **AtresPlayer**
  - **ATTTechChannel**
+ - **ATVAt**
  - **AudiMedia**
  - **AudioBoom**
  - **audiomack**
@@ -79,8 +82,6 @@
  - **AZMedien**: AZ Medien videos
  - **AZMedienPlaylist**: AZ Medien playlists
  - **AZMedienShowPlaylist**: AZ Medien show playlists
- - **Azubu**
- - **AzubuLive**
  - **BaiduVideo**: 百度视频
  - **bambuser**
  - **bambuser:channel**
@@ -125,7 +126,7 @@
  - **CamWithHer**
  - **canalc2.tv**
  - **Canalplus**: canalplus.fr, piwiplus.fr and d8.tv
- - **Canvas**
+ - **Canvas**: canvas.be and een.be
  - **CarambaTV**
  - **CarambaTVPage**
  - **CartoonNetwork**
@@ -143,6 +144,7 @@
  - **CCTV**: 央视网
  - **CDA**
  - **CeskaTelevize**
+ - **CeskaTelevizePorady**
  - **channel9**: Channel 9
  - **CharlieRose**
  - **Chaturbate**
@@ -211,6 +213,7 @@
  - **DiscoveryGo**
  - **DiscoveryGoPlaylist**
  - **DiscoveryNetworksDe**
+ - **DiscoveryVR**
  - **Disney**
  - **Dotsub**
  - **DouyuTV**: 斗鱼
@@ -278,7 +281,8 @@
  - **france2.fr:generation-quoi**
  - **FranceCulture**
  - **FranceInter**
- - **francetv**: France 2, 3, 4, 5 and Ô
+ - **FranceTV**
+ - **FranceTVEmbed**
  - **francetvinfo.fr**
  - **Freesound**
  - **freespeech.org**
@@ -304,6 +308,7 @@
  - **Globo**
  - **GloboArticle**
  - **Go**
+ - **Go90**
  - **GodTube**
  - **GodTV**
  - **Golem**
@@ -312,8 +317,8 @@
  - **GPUTechConf**
  - **Groupon**
  - **Hark**
- - **HBO**
- - **HBOEpisode**
+ - **hbo**
+ - **hbo:episode**
  - **HearThisAt**
  - **Heise**
  - **HellPorno**
@@ -428,6 +433,7 @@
  - **MDR**: MDR.DE and KiKA
  - **media.ccc.de**
  - **Medialaan**
+ - **Medici**
  - **Meipai**: 美拍
  - **MelonVOD**
  - **META**
@@ -525,6 +531,8 @@
  - **NJPWWorld**: 新日本プロレスワールド
  - **NobelPrize**
  - **Noco**
+ - **NonkTube**
+ - **Noovo**
  - **Normalboots**
  - **NosVideo**
  - **Nova**: TN.cz, Prásk.tv, Nova.cz, Novaplus.cz, FANDA.tv, Krásná.cz and Doma.cz
@@ -571,6 +579,8 @@
  - **orf:iptv**: iptv.ORF.at
  - **orf:oe1**: Radio Österreich 1
  - **orf:tvthek**: ORF TVthek
+ - **PacktPub**
+ - **PacktPubCourse**
  - **PandaTV**: 熊猫TV
  - **pandora.tv**: 판도라TV
  - **parliamentlive.tv**: UK parliament videos
@@ -594,7 +604,6 @@
  - **pluralsight**
  - **pluralsight:course**
  - **plus.google**: Google Plus
- - **pluzz.francetv.fr**
  - **podomatic**
  - **Pokemon**
  - **PolskieRadio**
@@ -628,7 +637,7 @@
  - **radiofrance**
  - **RadioJavan**
  - **Rai**
- - **RaiTV**
+ - **RaiPlay**
  - **RBMARadio**
  - **RDS**: RDS.ca
  - **RedBullTV**
@@ -653,7 +662,9 @@
  - **rte**: Raidió Teilifís Éireann TV
  - **rte:radio**: Raidió Teilifís Éireann radio
  - **rtl.nl**: rtl.nl and rtlxl.nl
- - **RTL2**
+ - **rtl2**
+ - **rtl2:you**
+ - **rtl2:you:series**
  - **RTP**
  - **RTS**: RTS.ch
  - **rtve.es:alacarta**: RTVE a la carta
@@ -735,6 +746,7 @@
  - **Steam**
  - **Stitcher**
  - **Streamable**
+ - **Streamango**
  - **streamcloud.eu**
  - **StreamCZ**
  - **StreetVoice**
@@ -775,6 +787,7 @@
  - **TheScene**
  - **TheSixtyOne**
  - **TheStar**
+ - **TheSun**
  - **TheWeatherChannel**
  - **ThisAmericanLife**
  - **ThisAV**
@@ -808,9 +821,11 @@
  - **Tutv**
  - **tv.dfb.de**
  - **TV2**
+ - **tv2.hu**
  - **TV2Article**
  - **TV3**
  - **TV4**: tv4.se and tv4play.se
+ - **TV5MondePlus**: TV5MONDE+
  - **TVA**
  - **TVANouvelles**
  - **TVANouvellesArticle**
@@ -865,9 +880,10 @@
  - **VGTV**: VGTV, BTTV, FTV, Aftenposten and Aftonbladet
  - **vh1.com**
  - **Viafree**
- - **Vice**
+ - **vice**
+ - **vice:article**
+ - **vice:show**
  - **Viceland**
- - **ViceShow**
  - **Vidbit**
  - **Viddler**
  - **Videa**
@@ -887,7 +903,7 @@
  - **vidme:user**
  - **vidme:user:likes**
  - **Vidzi**
- - **vier**
+ - **vier**: vier.be and vijf.be
  - **vier:videos**
  - **ViewLift**
  - **ViewLiftEmbed**
@@ -924,7 +940,10 @@
  - **Vporn**
  - **vpro**: npo.nl and ntr.nl
  - **Vrak**
- - **VRT**
+ - **VRT**: deredactie.be, sporza.be, cobra.be and cobra.canvas.be
+ - **vrv**
+ - **vrv:series**
+ - **VShare**
  - **vube**: Vube.com
  - **VuClip**
  - **VVVVID**
@@ -950,9 +969,10 @@
  - **wrzuta.pl**
  - **wrzuta.pl:playlist**
  - **WSJ**: Wall Street Journal
+ - **WSJArticle**
  - **XBef**
  - **XboxClips**
- - **XFileShare**: XFileShare based sites: DaClips, FileHoot, GorillaVid, MovPod, PowerWatch, Rapidvideo.ws, TheVideoBee, Vidto, Streamin.To, XVIDSTAGE
+ - **XFileShare**: XFileShare based sites: DaClips, FileHoot, GorillaVid, MovPod, PowerWatch, Rapidvideo.ws, TheVideoBee, Vidto, Streamin.To, XVIDSTAGE, Vid ABC, VidBom, vidlo
  - **XHamster**
  - **XHamsterEmbed**
  - **xiami:album**: 虾米音乐 - 专辑
@@ -997,6 +1017,7 @@
  - **youtube:user**: YouTube.com user videos (URL or "ytuser" keyword)
  - **youtube:watchlater**: Youtube watch later list, ":ytwatchlater" for short (requires authentication)
  - **Zapiks**
+ - **Zaq1**
  - **ZDF**
  - **ZDFChannel**
  - **zingmp3**: mp3.zing.vn
